@@ -140,10 +140,10 @@ class Game():
                 #pg.draw.line(self.screen, (0, 200, 100), (WIDTH / w * j, 0),
                          #(WIDTH / w * j, HEIGHT))
                 
-                pos = vec(WIDTH / w * j + (WIDTH / w) / 2, 
+                start = vec(WIDTH / w * j + (WIDTH / w) / 2, 
                           HEIGHT / h * i + (HEIGHT / h) / 2)
-                end = pos + field[j][i] * self.flowfield.resolution / 2
-                pg.draw.line(self.screen, (0, 200, 100), pos, end, 1)
+                end = start + field[j][i] * self.flowfield.resolution / 2
+                pg.draw.line(self.screen, (0, 200, 100), start, end, 1)
 
 
     def drawPath(self):
