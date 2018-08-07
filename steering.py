@@ -102,8 +102,11 @@ class Game():
     
     def draw(self):
         self.screen.fill((10, 40, 70))
-        #self.drawVectors()
-        self.drawField()
+        
+        if MODE == 'wander':
+            self.drawVectors()
+        if MODE == 'follow':
+            self.drawField()
         
         self.drawPath()
         
